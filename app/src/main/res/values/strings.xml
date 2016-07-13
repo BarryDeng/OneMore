@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="app_name">OneMore</string>
+    <string name="title_activity_main2"></string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="entries_str">
+        <item>中文</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="entries_value_str">
+        <item>Chinese</item>
+        <item>English</item>
+    </string-array>
+
+    <string name="action_settings">Settings</string>
+</resources>

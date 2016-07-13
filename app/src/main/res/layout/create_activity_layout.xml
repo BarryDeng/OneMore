@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView2">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="活动标题（必须）："
+            android:id="@+id/textView4" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入标题"
+            android:background="@drawable/edittext_selector"
+            android:ems="10"
+            android:id="@+id/activity_title"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="活动内容（必须）："
+            android:id="@+id/textView5" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="117dp"
+            android:inputType="textMultiLine"
+            android:background="@drawable/edittext_selector"
+            android:hint="请输入活动内容"
+            android:ems="10"
+            android:id="@+id/activity_content" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择活动标签（可选）"
+            android:id="@+id/button" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_date"
+            android:text="请输入活动日期（必须）" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_join_number"
+            android:text="请输入活动需求人数（必须）：" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="请选择活动图片（可选）："
+            android:id="@+id/textView6" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="203dp"
+            android:id="@+id/gridView" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布"
+            android:id="@+id/publish"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>

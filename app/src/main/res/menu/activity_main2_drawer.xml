@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_board_game"
+
+            android:title="桌游" />
+        <item
+            android:id="@+id/nav_dining"
+
+            android:title="餐饮" />
+        <item
+            android:id="@+id/nav_travel"
+
+            android:title="旅游" />
+        <item
+            android:id="@+id/nav_sport"
+
+            android:title="运动" />
+        <item
+            android:id="@+id/nav_movie"
+
+            android:title="电影" />
+    </group>
+
+    <item android:title="SideSet">
+        <menu>
+            <item
+                android:id="@+id/nav_message"
+
+                android:title="消息" />
+            <item
+                android:id="@+id/nav_history"
+
+                android:title="活动历史" />
+            <item
+                android:id="@+id/nav_set"
+
+                android:title="设置" />
+        </menu>
+    </item>
+
+</menu>

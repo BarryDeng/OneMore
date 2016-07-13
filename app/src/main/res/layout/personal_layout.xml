@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:example="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#00ffff"
+        android:id="@+id/view">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/return_button"
+            android:layout_gravity="left"
+            android:background="@drawable/back"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/change_info"
+            android:id="@+id/change_personnal_message"
+            android:layout_gravity="right|center"
+            />
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:id="@+id/imageView2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:background="@drawable/background"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18岁"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/header"
+            android:layout_toRightOf="@+id/header"
+            android:layout_toEndOf="@+id/header" />
+
+        <com.example.yanghuan.onemorecharge.RoundeImageView
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/touxiang"
+            android:id="@+id/header"
+            example:borderRadius="20dp"
+            example:type="circle"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+        </com.example.yanghuan.onemorecharge.RoundeImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lala"
+            android:id="@+id/textView"
+            android:layout_below="@+id/header"
+            android:layout_toLeftOf="@+id/header"
+            android:layout_toStartOf="@+id/header" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/female"
+            android:id="@+id/imageView"
+            android:layout_below="@+id/header"
+            android:layout_centerHorizontal="true" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:stretchColumns="*"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/shape_line"
+                >
+
+                <Button
+                    android:text="我的关注"
+                    android:textSize="20sp"
+                    android:id="@+id/my_attention"
+                    android:background="#00000000"
+                    />
+
+                <Button
+                    android:text="我的活动"
+                    android:textSize="20sp"
+                    android:id="@+id/my_activity"
+                    android:background="#00000000"
+                    />
+
+                <Button
+                    android:text="参加的活动"
+                    android:textSize="20sp"
+                    android:background="#00000000"
+                    android:id="@+id/my_recommand" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#ffffff"
+
+            android:orientation="vertical">
+            <Button
+                android:layout_gravity="center"
+                android:background="@drawable/shape_rect_angle"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="地址" />
+            <Button
+                android:layout_width="fill_parent"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shape_rect_angle"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="联系方式"
+                android:id="@+id/button3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shape_rect_angle"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="个人简介"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/button4"
+                android:layout_below="@+id/button3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/shape_rect_angle"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="兴趣爱好"
+                android:id="@+id/button5"
+                android:layout_below="@+id/button4"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:textColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_rect_angle"
+                android:layout_marginTop="10dp"
+                android:id="@+id/button6"
+                android:layout_below="@+id/button5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_alignParentEnd="true"
+                android:text="出生日期" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_rect_angle"
+                android:text="实名认证"
+                android:id="@+id/button7"
+                android:layout_below="@+id/button6"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
