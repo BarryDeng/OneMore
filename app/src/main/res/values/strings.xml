@@ -17,4 +17,10 @@
     </string-array>
 
     <string name="action_settings">Settings</string>
+    <string name="user_place_order">待定</string>
+    <string name="user_time_order">待定</string>
+    <string name="user_person_number_order">10</string>
+    <string name="user_activity_more_add_number">5</string>
+    <string name="user_activity_more_comemt_number">10</string>
+    <string name="user_activity_more_praise_number">100</string>
 </resources>

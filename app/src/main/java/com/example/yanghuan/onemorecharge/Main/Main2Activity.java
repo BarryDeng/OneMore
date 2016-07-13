@@ -3,6 +3,9 @@ package com.example.yanghuan.onemorecharge.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +15,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.example.yanghuan.onemorecharge.ActivityMoreInfo.AcitivityMoreInfo;
 import com.example.yanghuan.onemorecharge.SideSet.HistroyBrowserActivtity;
 import  com.example.yanghuan.onemorecharge.SideSet.InformationActivity;
 import  com.example.yanghuan.onemorecharge.Personal.PersonalActivity;
@@ -25,7 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main2Activity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener,
+        AdapterView.OnItemClickListener {
 
     private List<Card> data = new ArrayList<Card>();
     //test string
@@ -40,6 +46,9 @@ public class Main2Activity extends AppCompatActivity
         ListView mListView = (ListView)findViewById(R.id.main_listview);
         CardAdapter mAdapter = new CardAdapter(data, this);
         mListView.setAdapter(mAdapter);
+        mListView.setFocusable(true);
+        mListView.setFocusableInTouchMode(true);
+        mListView.setOnItemClickListener(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -131,6 +140,7 @@ public class Main2Activity extends AppCompatActivity
         return true;
     }
 
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -141,6 +151,18 @@ public class Main2Activity extends AppCompatActivity
                 break;
             case R.id.addActivity:
                 startActivity(new Intent(Main2Activity.this, CreatePersonalActivity.class));
+                break;
+            default:
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Log.d("Main2Activity", String.valueOf(view.getId()));
+        Log.d("Main2Activity", String.valueOf(R.id.header));
+        switch (position){
+            case 0:
+                startActivity(new Intent(Main2Activity.this, AcitivityMoreInfo.class));
                 break;
             default:
         }

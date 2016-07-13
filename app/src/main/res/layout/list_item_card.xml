@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:background="@drawable/shape_rect_angle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content">
 
     <RelativeLayout
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.example.yanghuan.onemorecharge.RoundeImageView
             android:layout_width="50dip"
@@ -40,20 +40,6 @@
             android:layout_alignParentStart="true" >
         </com.example.yanghuan.onemorecharge.RoundeImageView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="暂无活动详情"
-            android:id="@+id/connent"
-            android:background="@drawable/shape_rect_angle"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/person_album"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,34 +48,13 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="待定"
-            android:id="@+id/activity_place"
-            android:layout_below="@+id/activity_time"
-            android:layout_alignLeft="@+id/activity_time"
-            android:layout_alignStart="@+id/activity_time"
-            android:layout_alignRight="@+id/activity_time"
-            android:layout_alignEnd="@+id/activity_time" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="待定"
-            android:id="@+id/activity_time"
-            android:layout_below="@+id/tableLayout"
-            android:layout_toRightOf="@+id/textView7"
-            android:layout_alignRight="@+id/connent"
-            android:layout_alignEnd="@+id/connent" />
-
         <TableLayout
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/connent"
             android:stretchColumns="*"
-            android:id="@+id/tableLayout">
+            android:id="@+id/tableLayout"
+            android:layout_below="@+id/person_album">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -145,22 +110,5 @@
             android:layout_toRightOf="@+id/header"
             android:layout_toEndOf="@+id/header" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="活动时间："
-            android:id="@+id/textView7"
-            android:layout_below="@+id/tableLayout"
-            android:layout_alignLeft="@+id/connent"
-            android:layout_alignStart="@+id/connent" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="活动地点："
-            android:id="@+id/textView8"
-            android:layout_below="@+id/activity_time"
-            android:layout_alignLeft="@+id/textView7"
-            android:layout_alignStart="@+id/textView7" />
     </RelativeLayout>
 </LinearLayout>

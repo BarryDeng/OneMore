@@ -60,9 +60,6 @@ public class CardAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.list_item_card, null);
 
             holder = new ViewHolder();
-            holder.connent = (TextView) convertView.findViewById(R.id.connent);
-            holder.place = (TextView) convertView.findViewById(R.id.activity_place);
-            holder.time = (TextView) convertView.findViewById(R.id.activity_time);
             holder.praise = (ImageView) convertView.findViewById(R.id.praise);
             holder.comment = (ImageView)convertView.findViewById(R.id.comment);
             holder.concern = (ImageView) convertView.findViewById(R.id.concern);
@@ -77,9 +74,6 @@ public class CardAdapter extends BaseAdapter {
     }
 
     public static class ViewHolder{
-        TextView connent;
-        TextView place;
-        TextView time;
         ImageView praise;
         ImageView comment;
         ImageView concern;
