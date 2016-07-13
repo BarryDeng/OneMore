@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tags">
+        <item>桌游</item>
+        <item>餐饮 </item>
+        <item>旅游</item>
+        <item>运动</item>
+        <item>电影</item>
+        <item>K 歌</item>
+        <item>其他</item>
+        <item>待定</item>
+    </string-array>
+</resources>
