@@ -9,7 +9,7 @@
 
     <string-array name="entries_str">
         <item>中文</item>
-        <item>英语</item>
+        <item>英文</item>
     </string-array>
     <string-array name="entries_value_str">
         <item>Chinese</item>
