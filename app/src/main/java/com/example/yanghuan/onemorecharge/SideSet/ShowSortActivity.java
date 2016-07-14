@@ -2,31 +2,19 @@ package com.example.yanghuan.onemorecharge.SideSet;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Looper;
-import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.yanghuan.onemorecharge.ActivityMoreInfo.AcitivityMoreInfo;
 import com.example.yanghuan.onemorecharge.Main.Card;
-import com.example.yanghuan.onemorecharge.Main.CardAdapter;
 import com.example.yanghuan.onemorecharge.R;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 /**
  * Created by yanghuan on 2016/7/14.

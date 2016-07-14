@@ -1,50 +1,52 @@
 package com.example.yanghuan.onemorecharge.Main;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import com.example.yanghuan.onemorecharge.ActivityMoreInfo.ActivityMoreInfo;
 import com.example.yanghuan.onemorecharge.R;
+import com.example.yanghuan.onemorecharge.RoundeImageView;
+
 /**
  * Created by yanghuan on 2016/7/13.
  */
-public class CardAdapter extends BaseAdapter {
-/*
-    private static final String TAG = "LoaderAdapter";
-    private boolean mBusy = false;
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder>  {
 
-    public void setFlagBusy(boolean busy){
-        this.mBusy = busy;
-    }*/
+    private List<Drawable> data;
+    private final Context context;
+    private final LayoutInflater mInflater;
 
-  /*  private ImageLoader mImageLoader;
-    private int Count;
-    private String[] urlArrays;*/
-    private List<Card> data;
-    private Context context;
-    private LayoutInflater mInflater;
-
-    public CardAdapter(List<Card> data, Context context) {
+    public CardAdapter(List<Drawable> data, Context context) {
         this.data = data;
         this.context = context;
         mInflater = LayoutInflater.from(context);
     }
 
     @Override
-    public int getCount() {
-        // TODO Auto-generated method stub
-        return data.size();
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new MyViewHolder(mInflater.inflate(R.layout.list_item_card, parent, false));
     }
 
     @Override
-    public Object getItem(int position) {
-        // TODO Auto-generated method stub
-        return data.get(position);
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        holder.person_album.setImageDrawable(data.get(position));
+        //holder.header.setImageResource(R.drawable.touxiang);
+        //holder.person_album.setImageResource(R.drawable.background);
+        //holder.imageView4.setImageResource();
+        //holder.praise.setImageResource(R.drawable.praise_empty);
+        //holder.comment.setImageResource(R.drawable.connent);
+        //holder.join.setImageResource(R.drawable.add);
+        //holder.user_male.setImageResource(R.drawable.female);
+        holder.user_name.setText("lala");
     }
 
     @Override
@@ -54,31 +56,32 @@ public class CardAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
-        if(convertView==null){
-            convertView = mInflater.inflate(R.layout.list_item_card, null);
+    public int getItemCount() {
+        return data.size();
+    }
 
-            holder = new ViewHolder();
-            holder.praise = (ImageView) convertView.findViewById(R.id.praise);
-            holder.comment = (ImageView)convertView.findViewById(R.id.comment);
-            holder.concern = (ImageView) convertView.findViewById(R.id.concern);
-            holder.join = (ImageView) convertView.findViewById(R.id.join);
-            holder.header = (com.example.yanghuan.onemorecharge.RoundeImageView) convertView.findViewById(R.id.header);
-            holder.album = (com.example.yanghuan.onemorecharge.RoundeImageView) convertView.findViewById(R.id.person_album);
-            convertView.setTag(holder);
-        }else{
-            holder = (ViewHolder) convertView.getTag();
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        RoundeImageView header = null;
+        ImageView person_album = null;
+        ImageView tag_photo = null;
+        TextView user_name = null;
+        TextView title_name = null;
+        TextView tag_name = null;
+
+        MyViewHolder(View view) {
+            super(view);
+            header = (RoundeImageView)view.findViewById(R.id.header);
+            person_album = (ImageView)view.findViewById(R.id.person_album);
+            user_name = (TextView)view.findViewById(R.id.user_name);
+            tag_photo = (ImageView) view.findViewById(R.id.tag_photo);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.startActivity(new Intent(context, ActivityMoreInfo.class));
+                }
+            });
         }
-        return convertView;
     }
 
-    public static class ViewHolder{
-        ImageView praise;
-        ImageView comment;
-        ImageView concern;
-        ImageView join;
-        com.example.yanghuan.onemorecharge.RoundeImageView header;
-        com.example.yanghuan.onemorecharge.RoundeImageView album;
-    }
 }

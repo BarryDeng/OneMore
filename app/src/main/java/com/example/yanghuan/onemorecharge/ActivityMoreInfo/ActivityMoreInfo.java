@@ -15,7 +15,8 @@ import com.example.yanghuan.onemorecharge.R;
 /**
  * Created by yanghuan on 2016/7/13.
  */
-public class AcitivityMoreInfo extends Activity implements View.OnClickListener{
+
+public class ActivityMoreInfo extends Activity implements View.OnClickListener{
 
     TextView charge_view;
 
@@ -58,7 +59,7 @@ public class AcitivityMoreInfo extends Activity implements View.OnClickListener{
                 charge_view.setText(String.valueOf(data2));
                 break;
             case R.id.comment_view:
-                Intent intent = new Intent(AcitivityMoreInfo.this, CommentActivity.class);
+                Intent intent = new Intent(ActivityMoreInfo.this, CommentActivity.class);
             default:
         }
     }
