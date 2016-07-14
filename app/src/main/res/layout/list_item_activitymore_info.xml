@@ -25,9 +25,6 @@
             android:textColor="@android:color/white"
             android:textSize="24dp"
             android:text="活动详情
-            "/>
-
-    </android.support.design.widget.CollapsingToolbarLayout>
         <ImageView
             android:orientation="vertical"
             android:layout_width="match_parent"
