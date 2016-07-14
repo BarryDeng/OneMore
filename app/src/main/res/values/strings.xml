@@ -16,6 +16,18 @@
         <item>English</item>
     </string-array>
 
+    <string-array name="par_activity">
+        <item>相距甚远</item>
+        <item>我要的骑行</item>
+    </string-array>
+
+    <string-array name="comment_list">
+        <item>nananalana自己的评论</item>
+        <item>nananalana妹妹的评论</item>
+        <item>nananalana姐姐的评论</item>
+        <item>nananalana弟弟的评论</item>
+    </string-array>
+
     <string name="action_settings">Settings</string>
     <string name="user_place_order">待定</string>
     <string name="user_time_order">待定</string>
