@@ -24,6 +24,8 @@ public class PersonalActivity extends Activity implements View.OnClickListener{
         ImageButton return_button = (ImageButton) findViewById(R.id.return_button);
         return_button.setOnClickListener(this);
 
+        Button parti_button = (Button)findViewById(R.id.my_recommand);
+        parti_button.setOnClickListener(this);
        /* ImageButton praise_button = ()*/
     }
 
@@ -35,6 +37,9 @@ public class PersonalActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.return_button:
                 super.onBackPressed();
+                break;
+            case R.id.my_recommand:
+                startActivity(new Intent(PersonalActivity.this, ParticipatePlans.class));
                 break;
             default:
 

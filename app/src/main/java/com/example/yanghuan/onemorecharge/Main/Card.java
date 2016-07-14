@@ -15,12 +15,13 @@ public class Card {
     private String place;
     private String time;
     private String connent;
-    private String url = "http://g.hiphotos.baidu.com/zhidao/pic/item/aa64034f78f0f736795f59e20b55b319eac413ab.jpg";
+    private String url;
 
-    public Card(String name, String desc, String connent, Context context) {
+    public Card(String name, String desc, String connent, String url) {
         this.place = place;
         this.time = time;
         this.connent = connent;
+        this.url = url;
 
     }
 

@@ -16,11 +16,11 @@ public class InformationActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.information_layout);
+        setContentView(R.layout.message_layout);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 InformationActivity.this, android.R.layout.simple_list_item_1, data);
-        ListView listView = (ListView) findViewById(R.id.information_listview);
+        ListView listView = (ListView) findViewById(R.id.com_pri_list);
         listView.setAdapter(adapter);
     }
 }

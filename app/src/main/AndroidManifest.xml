@@ -56,6 +56,10 @@
         <activity
             android:name=".ActivityMoreInfo.CommentActivity"
             android:launchMode="singleTask" />
+        <activity
+            android:name=".Personal.ParticipatePlans"
+            android:label="@string/title_activity_participate_plans"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

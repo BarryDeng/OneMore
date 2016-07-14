@@ -39,13 +39,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.person_album.setImageDrawable(data.get(position));
-        //holder.header.setImageResource(R.drawable.touxiang);
-        //holder.person_album.setImageResource(R.drawable.background);
-        //holder.imageView4.setImageResource();
-        //holder.praise.setImageResource(R.drawable.praise_empty);
-        //holder.comment.setImageResource(R.drawable.connent);
-        //holder.join.setImageResource(R.drawable.add);
-        //holder.user_male.setImageResource(R.drawable.female);
+        // holder.title_name.setText("");
         holder.user_name.setText("lala");
     }
 

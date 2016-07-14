@@ -7,6 +7,20 @@
     android:orientation="vertical"
     >
 
+    <LinearLayout android:id="@+id/splashscreen"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/splashimage"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/loginscreen"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
     <ImageView
         android:id="@+id/image_logo"
         android:layout_marginLeft="42dp"
@@ -178,41 +192,34 @@
 
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="200dp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
+
+        android:gravity="bottom"
         android:id="@+id/relativeLayout3">
 
 
         <ImageView
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="1dp"
             android:background="#ababab"
-            android:layout_marginBottom="46dp"
-            android:layout_above="@+id/weibo"
-            android:layout_toLeftOf="@+id/View2"
-            android:id="@+id/imageView" />
+            android:layout_marginBottom="150dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/line" />
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="1dp"
-            android:background="#ababab"
-            android:layout_marginBottom="46dp"
-            android:layout_above="@+id/weibo"
-            android:layout_toRightOf="@+id/View2"
-            android:id="@+id/imageView1" />
 
         <TextView
             android:text="第三方登录"
-            android:layout_above="@+id/weibo"
+            android:layout_above="@+id/line"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textColor="#adadad"
             android:textSize="16dp"
-            android:layout_marginBottom="40dp"
-            android:paddingTop="2dp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/View2" />
 
 
@@ -221,21 +228,21 @@
             android:layout_height="30dp"
             android:id="@+id/weibo"
             android:background="@drawable/weibo"
-            android:layout_marginBottom="70dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
             />
 
         <ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/qq"
-            android:background="@drawable/third_head"
-            android:layout_marginBottom="70dp"
-            android:layout_marginRight="50dp"
+            android:background="@drawable/qq"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="20dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true" />
+             />
 
     </RelativeLayout>
+    </LinearLayout>
 </RelativeLayout>

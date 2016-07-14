@@ -46,13 +46,25 @@ public class Main2Activity extends AppCompatActivity
     private List<Card> data = new ArrayList<Card>();
     //test string
     private RecyclerView mRView;
+
+    private ArrayList<String> urls = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main2);
 
-        //initData();
+        urls.add("http://192.168.1.205:8088/pics/1.jpg");
+        urls.add("http://192.168.1.205:8088/pics/2.jpg");
+        urls.add("http://192.168.1.205:8088/pics/3.jpg");
+        urls.add("http://192.168.1.205:8088/pics/4.jpg");
+        urls.add("http://192.168.1.205:8088/pics/5.jpg");
+        urls.add("http://192.168.1.205:8088/pics/6.jpg");
+        urls.add("http://192.168.1.205:8088/pics/7.jpg");
+        urls.add("http://192.168.1.205:8088/pics/8.jpg");
+        urls.add("http://192.168.1.205:8088/pics/9.jpg");
+        urls.add("http://192.168.1.205:8088/pics/10.jpg");
+
         mRView = (RecyclerView)findViewById(R.id.main_recycler_view);
         mRView.setLayoutManager(new LinearLayoutManager(this));
         JazzyRecyclerViewScrollListener listener = new JazzyRecyclerViewScrollListener();
@@ -76,7 +88,7 @@ public class Main2Activity extends AppCompatActivity
             protected List<Drawable> doInBackground(List<Card>... lists) {
                 List<Drawable> imageList = new ArrayList<>();
                 for(int i=0;i<10;i++){
-                    Card card = new Card("some", "2016", "good", Main2Activity.this);
+                    Card card = new Card("some", "2016", "good", urls.get(i));
                     String url = card.getURL();
                     try {
                         URL mUrl=new URL(url);
