@@ -2,7 +2,11 @@ package com.example.yanghuan.onemorecharge.Main;
 
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -25,30 +29,63 @@ import  com.example.yanghuan.onemorecharge.SideSet.InformationActivity;
 import  com.example.yanghuan.onemorecharge.Personal.PersonalActivity;
 import  com.example.yanghuan.onemorecharge.R;
 import  com.example.yanghuan.onemorecharge.SideSet.SetActivity;
+import com.twotoasters.jazzylistview.effects.TiltEffect;
+import com.twotoasters.jazzylistview.recyclerview.JazzyRecyclerViewScrollListener;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main2Activity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener,
-        AdapterView.OnItemClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener
+         {
 
     private List<Card> data = new ArrayList<Card>();
     //test string
-
+    private RecyclerView mRView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main2);
 
-        initData();
-        ListView mListView = (ListView)findViewById(R.id.main_listview);
-        CardAdapter mAdapter = new CardAdapter(data, this);
-        mListView.setAdapter(mAdapter);
-        mListView.setFocusable(true);
-        mListView.setFocusableInTouchMode(true);
-        mListView.setOnItemClickListener(this);
+        //initData();
+        mRView = (RecyclerView)findViewById(R.id.main_recycler_view);
+        mRView.setLayoutManager(new LinearLayoutManager(this));
+        JazzyRecyclerViewScrollListener listener = new JazzyRecyclerViewScrollListener();
+        mRView.setOnScrollListener(listener);
+        listener.setTransitionEffect(new TiltEffect());
+
+        AsyncTask<List<Card>, Integer, List<Drawable>> task = new AsyncTask<List<Card>, Integer, List<Drawable>>() {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+            }
+
+            @Override
+            protected void onPostExecute(List<Drawable> data) {
+                mRView.setAdapter(new CardAdapter(data, Main2Activity.this));
+            }
+
+            @Override
+            protected List<Drawable> doInBackground(List<Card>... lists) {
+                List<Drawable> imageList = new ArrayList<>();
+                for(int i=0;i<10;i++){
+                    Card card = new Card("some", "2016", "good", Main2Activity.this);
+                    String url = card.getURL();
+                    try {
+                        URL mUrl=new URL(url);
+                        Drawable mDrawable=Drawable.createFromStream(mUrl.openStream(), "src");
+                        imageList.add(mDrawable);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                return imageList;
+            }
+        };
+        task.execute(data);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -72,14 +109,6 @@ public class Main2Activity extends AppCompatActivity
         ImageView addActivity = (ImageView) findViewById(R.id.addActivity);
         addActivity.setOnClickListener(this);
     }
-
-    private void initData() {
-        for(int i=0;i<10;i++){
-            Card card = new Card("some", "2016", "good");
-            data.add(card);
-        }
-    }
-
 
     @Override
     public void onBackPressed() {
@@ -156,16 +185,5 @@ public class Main2Activity extends AppCompatActivity
         }
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Log.d("Main2Activity", String.valueOf(view.getId()));
-        Log.d("Main2Activity", String.valueOf(R.id.header));
-        switch (position){
-            case 0:
-                startActivity(new Intent(Main2Activity.this, AcitivityMoreInfo.class));
-                break;
-            default:
-        }
-    }
 
 }
