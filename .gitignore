@@ -6,3 +6,8 @@
 .DS_Store
 /build
 /captures
+<<<<<<< HEAD
+.idea
+=======
+.idea
+>>>>>>> 05cfe8dd9d14f64995ebcfbb971600312a588879

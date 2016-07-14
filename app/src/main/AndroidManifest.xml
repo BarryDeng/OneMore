@@ -43,6 +43,12 @@
         <activity
             android:name=".ActivityMoreInfo.AcitivityMoreInfo"
             android:launchMode="singleTask" />
+        <activity
+            android:name=".SideSet.SortOfActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SideSet.ShowSortActivity"
+            android:launchMode="singleTask" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -31,6 +31,8 @@ import  com.example.yanghuan.onemorecharge.R;
 import  com.example.yanghuan.onemorecharge.SideSet.SetActivity;
 import com.twotoasters.jazzylistview.effects.TiltEffect;
 import com.twotoasters.jazzylistview.recyclerview.JazzyRecyclerViewScrollListener;
+import com.example.yanghuan.onemorecharge.SideSet.ShowSortActivity;
+import com.example.yanghuan.onemorecharge.SideSet.SortOfActivity;
 
 import java.io.IOException;
 import java.net.URL;
@@ -140,28 +142,40 @@ public class Main2Activity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
+        Intent intent;
 
         int id = item.getItemId();
-
         if (id == R.id.nav_board_game) {
             // Handle the camera action
+            intent = new Intent(Main2Activity.this, ShowSortActivity.class);
+            intent.putExtra("data", R.string.play);
+            startActivity(intent);
         } else if (id == R.id.nav_dining) {
-
+            intent = new Intent(Main2Activity.this, ShowSortActivity.class);
+            intent.putExtra("data", R.string.eating);
+            startActivity(intent);
         } else if (id == R.id.nav_history) {
             startActivity(new Intent(Main2Activity.this, HistroyBrowserActivtity.class));
         }  else if (id == R.id.nav_message) {
             startActivity(new Intent(Main2Activity.this, InformationActivity.class));
         } else if (id == R.id.nav_movie) {
-
+            intent = new Intent(Main2Activity.this, ShowSortActivity.class);
+            intent.putExtra("data", R.string.movie);
+            startActivity(intent);
         }else if (id == R.id.nav_set) {
             startActivity(new Intent(Main2Activity.this, SetActivity.class));
         }else if (id == R.id.nav_sport) {
-
+            intent = new Intent(Main2Activity.this, ShowSortActivity.class);
+            intent.putExtra("data", R.string.sport);
+            startActivity(intent);
         }else if (id == R.id.nav_travel) {
-
-        }else if (id == R.id.nav_view) {
-
+            intent = new Intent(Main2Activity.this, ShowSortActivity.class);
+            intent.putExtra("data", R.string.trvel);
+            startActivity(intent);
+        }else if (id == R.id.nav_sing) {
+            intent = new Intent(Main2Activity.this, ShowSortActivity.class);
+            intent.putExtra("data", R.string.sing);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

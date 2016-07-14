@@ -2,79 +2,150 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e1eef4"
     android:id="@+id/scrollView2">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="活动标题（必须）："
-            android:id="@+id/textView4" />
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:hint="输入活动标题"-->
+        <!--android:background="@drawable/shape_input_rect_angle"-->
+        <!--android:id="@+id/textView4" />-->
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="请输入标题"
+            android:hint="输入活动标题"
+            android:gravity="center"
             android:background="@drawable/edittext_selector"
             android:ems="10"
             android:id="@+id/activity_title"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="活动内容（必须）："
-            android:id="@+id/textView5" />
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="活动内容（必须）："-->
+        <!--android:id="@+id/textView5" />-->
+
+        <!--<Spinner-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:background="@drawable/shape_input_rect_angle"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/spinner" />-->
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="117dp"
+            android:layout_height="100dp"
             android:inputType="textMultiLine"
+            android:layout_marginTop="20dp"
             android:background="@drawable/edittext_selector"
-            android:hint="请输入活动内容"
+            android:gravity="center"
+            android:hint="输入活动内容"
             android:ems="10"
             android:id="@+id/activity_content" />
 
-        <Button
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="请选择活动标签（可选）"
-            android:id="@+id/button" />
+            android:layout_below="@id/btn_login"
+            android:id="@+id/relativeLayout">
+
+            <View android:id="@+id/strut"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_input_rect_angle"
+                android:textColor="#6b6b6b"
+                android:layout_alignRight="@+id/strut"
+                android:layout_alignParentLeft="true"
+                android:text="选择活动标签（可选）"
+                android:textSize="17dp"
+                android:id="@+id/actag" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_alignLeft="@+id/strut"
+                android:layout_height="67dp"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/tags"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/strut"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_input_rect_angle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/tags"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/activity_date"
-            android:text="请输入活动日期（必须）" />
+            android:layout_marginTop="20dp"
+            android:height="30dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/shape_input_rect_angle"
+            android:hint="活动日期（必须）" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/activity_join_number"
-            android:text="请输入活动需求人数（必须）：" />
+            android:background="@drawable/shape_input_rect_angle"
+            android:height="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:hint="活动需求人数（必须）" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:background="@drawable/shape_input_rect_angle"
+            android:gravity="center_horizontal"
             android:text="请选择活动图片（可选）："
+            android:textColor="#6b6b6b"
             android:id="@+id/textView6" />
 
         <GridView
             android:layout_width="match_parent"
             android:layout_height="203dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_input_rect_angle"
             android:id="@+id/gridView" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发布"
+            android:layout_marginTop="20dp"
             android:id="@+id/publish"
+            android:background="@drawable/shape_rect_angle"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
