@@ -1,114 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:example="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@drawable/shape_rect_angle"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@android:color/holo_blue_light"
     android:layout_width="match_parent"
     android:descendantFocusability="blocksDescendants"
     android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="200dp"
+        android:id="@+id/person_album"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </ImageView>
 
-        <com.example.yanghuan.onemorecharge.RoundeImageView
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:src="@drawable/touxiang"
-            android:id="@+id/header"
-            android:layout_marginLeft="24dp"
-            example:borderRadius="20dp"
-            example:type="circle"
-            android:layout_marginTop="33dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="24dp">
-        </com.example.yanghuan.onemorecharge.RoundeImageView>
+    <RelativeLayout
+        android:background="#00ffff"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/person_album"
+        android:layout_centerHorizontal="true">
 
-        <com.example.yanghuan.onemorecharge.RoundeImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/person_album"
-            android:src="@drawable/background"
-            example:type="round"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            example:borderRadius="20dp"
-            android:layout_below="@+id/header"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" >
-        </com.example.yanghuan.onemorecharge.RoundeImageView>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
-            android:layout_above="@+id/person_album"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TableLayout
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*"
-            android:id="@+id/tableLayout"
-            android:layout_below="@+id/person_album">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/praise_empty"
-                    android:text="赞"
-                    android:id="@+id/praise"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="关注"
-                    android:src="@drawable/concern"
-                    android:id="@+id/concern"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="评论"
-                    android:src="@drawable/connent"
-                    android:id="@+id/comment"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="参加"
-                    android:src="@drawable/add"
-                    android:id="@+id/join"
-                    />
-            </TableRow>
-        </TableLayout>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:id="@+id/user_male"
-            android:src="@drawable/female"
-            android:layout_below="@+id/user_name"
-            android:layout_alignRight="@+id/user_name"
-            android:layout_alignEnd="@+id/user_name" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="lala"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="20dp"
+            android:text="@string/activity_title"
+            android:id="@+id/title_view"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <com.example.yanghuan.onemorecharge.RoundeImageView
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:src="@drawable/touxiang"
+            android:id="@+id/head_view"
+            app:borderRadius="20dp"
+            app:type="circle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentBottom="true"
+            >
+        </com.example.yanghuan.onemorecharge.RoundeImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_nikoname"
+            android:textSize="24dp"
+            android:textColor="@android:color/white"
             android:id="@+id/user_name"
-            android:layout_alignTop="@+id/header"
-            android:layout_toRightOf="@+id/header"
-            android:layout_toEndOf="@+id/header" />
+            android:layout_above="@+id/tag_photo"
+            android:layout_alignLeft="@+id/head_view"
+            android:layout_alignStart="@+id/title_view" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tag_photo"
+            android:src="@drawable/symbol_black"
+            android:layout_alignBottom="@+id/head_view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sport"
+            android:textColor="@android:color/white"
+            android:id="@+id/tag"
+            android:layout_alignBottom="@+id/head_view"
+            android:layout_toLeftOf="@+id/tag_photo"
+            android:layout_toStartOf="@+id/tag_photo" />
 
     </RelativeLayout>
-</LinearLayout>
+
+</RelativeLayout>

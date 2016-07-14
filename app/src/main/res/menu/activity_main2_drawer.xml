@@ -23,6 +23,9 @@
             android:id="@+id/nav_movie"
 
             android:title="电影" />
+        <item
+            android:id="@+id/nav_sing"
+            android:title="K歌"/>
     </group>
 
     <item android:title="SideSet">
@@ -31,10 +34,6 @@
                 android:id="@+id/nav_message"
 
                 android:title="消息" />
-            <item
-                android:id="@+id/nav_history"
-
-                android:title="活动历史" />
             <item
                 android:id="@+id/nav_set"
 
