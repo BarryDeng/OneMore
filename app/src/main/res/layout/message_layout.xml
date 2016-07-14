@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#00bcd4"
+        android:gravity="center_vertical"
+        android:id="@+id/mes"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="消息"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:id="@+id/par_acti" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/mes"
+        android:id="@+id/com_pri"
+        >
+
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="评论"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:background="@drawable/shape_input_rect_angle"
+        android:id="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赞"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:background="@drawable/shape_input_rect_angle"
+        android:id="@+id/button2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/com_pri"
+        android:id="@+id/list_com"
+        >
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/com_pri_list"
+        android:layout_weight="1" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

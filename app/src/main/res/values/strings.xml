@@ -28,6 +28,13 @@
         <item>nananalana弟弟的评论</item>
     </string-array>
 
+    <string-array name="com_pri_list">
+        <item>nananalana自己评论了你并和你打了一声招呼</item>
+        <item>nananalana妹妹评论了你并说你一点都不好看</item>
+        <item>nananalana姐姐评论了你，她说她喜欢深圳</item>
+        <item>nananalana弟弟评论了你，说喜欢你的手机</item>
+    </string-array>
+
     <string name="action_settings">Settings</string>
 
 
