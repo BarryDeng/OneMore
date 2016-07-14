@@ -9,99 +9,30 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.example.yanghuan.onemorecharge.RoundeImageView
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:id="@+id/header"
-            android:layout_marginLeft="24dp"
-            example:borderRadius="20dp"
-            example:type="circle"
-            android:layout_marginTop="33dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="24dp">
-        </com.example.yanghuan.onemorecharge.RoundeImageView>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        >
 
         <com.example.yanghuan.onemorecharge.RoundeImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:id="@+id/person_album"
+            android:id="@+id/plan_pic"
             example:type="round"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
             example:borderRadius="20dp"
-            android:layout_below="@+id/header"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" >
-        </com.example.yanghuan.onemorecharge.RoundeImageView>
+        </com.example.yanghuan.onemorecharge.RoundeImageView>-+
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
-            android:layout_above="@+id/person_album"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TableLayout
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*"
-            android:id="@+id/tableLayout"
-            android:layout_below="@+id/person_album">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:text="赞"
-                    android:id="@+id/praise"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="关注"
-                    android:id="@+id/concern"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="评论"
-                    android:id="@+id/comment"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text="参加"
-                    android:id="@+id/join"
-                    />
-            </TableRow>
-        </TableLayout>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:id="@+id/user_male"
-            android:layout_below="@+id/user_name"
-            android:layout_alignRight="@+id/user_name"
-            android:layout_alignEnd="@+id/user_name" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="lala"
-            android:id="@+id/user_name"
-            android:layout_alignTop="@+id/header"
-            android:layout_toRightOf="@+id/header"
-            android:layout_toEndOf="@+id/header" />
+            android:id="@+id/plan_title"
+            android:layout_below="@+id/plan_pic"
+            />
 
     </RelativeLayout>
 </LinearLayout>

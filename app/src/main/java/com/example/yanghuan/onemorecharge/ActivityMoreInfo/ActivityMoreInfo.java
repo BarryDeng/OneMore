@@ -12,7 +12,7 @@ import com.example.yanghuan.onemorecharge.R;
 /**
  * Created by yanghuan on 2016/7/13.
  */
-public class AcitivityMoreInfo extends Activity implements View.OnClickListener{
+public class ActivityMoreInfo extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

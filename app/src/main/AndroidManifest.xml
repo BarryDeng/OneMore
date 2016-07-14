@@ -41,7 +41,7 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".ActivityMoreInfo.AcitivityMoreInfo"
+            android:name=".ActivityMoreInfo.ActivityMoreInfo"
             android:launchMode="singleTask" />
         <activity
             android:name=".SideSet.SortOfActivity"

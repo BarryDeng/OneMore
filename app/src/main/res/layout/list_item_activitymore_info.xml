@@ -23,8 +23,7 @@
             android:layout_gravity="center"
             android:textColor="@android:color/white"
             android:textSize="20dp"
-            android:text="活动详情
-            "/>
+            android:text="活动详情"/>
     </android.support.design.widget.CollapsingToolbarLayout>
         <ImageView
             android:orientation="vertical"

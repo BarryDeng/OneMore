@@ -1,22 +1,20 @@
 package com.example.yanghuan.onemorecharge.Main;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import com.example.yanghuan.onemorecharge.ActivityMoreInfo.ActivityMoreInfo;
 import com.example.yanghuan.onemorecharge.R;
 import com.example.yanghuan.onemorecharge.RoundeImageView;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by yanghuan on 2016/7/13.
@@ -62,7 +60,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         return data.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
         RoundeImageView header = null;
         RoundeImageView person_album = null;
@@ -85,6 +83,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             join = (ImageView)view.findViewById(R.id.join);
             user_male = (ImageView)view.findViewById(R.id.user_male);
             user_name = (TextView)view.findViewById(R.id.user_name);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.startActivity(new Intent(context, ActivityMoreInfo.class));
+                }
+            });
         }
     }
 
