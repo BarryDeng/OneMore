@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main2);
-
+s
         initData();
         ListView mListView = (ListView)findViewById(R.id.main_listview);
         CardAdapter mAdapter = new CardAdapter(data, this);
