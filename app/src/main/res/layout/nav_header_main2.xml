@@ -19,7 +19,7 @@
         android:id="@+id/head_view"
         app:borderRadius="20dp"
         app:type="circle"
-        android:layout_marginBottom="70dp" >
+        android:layout_marginBottom="50dp" >
     </com.example.yanghuan.onemorecharge.RoundeImageView>
 
 </RelativeLayout>

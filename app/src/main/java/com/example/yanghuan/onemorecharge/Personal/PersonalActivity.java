@@ -23,6 +23,8 @@ public class PersonalActivity extends Activity implements View.OnClickListener{
 
         ImageButton return_button = (ImageButton) findViewById(R.id.return_button);
         return_button.setOnClickListener(this);
+
+       /* ImageButton praise_button = ()*/
     }
 
     @Override

@@ -22,9 +22,6 @@
             android:name=".Personal.PersonalActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".SideSet.HistroyBrowserActivtity"
-            android:launchMode="singleTask" />
-        <activity
             android:name=".SideSet.InformationActivity"
             android:launchMode="singleTask" />
         <activity
@@ -48,6 +45,9 @@
             android:launchMode="singleTask" />
         <activity
             android:name=".SideSet.ShowSortActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ActivityMoreInfo.AcitivityMoreInfo"
             android:launchMode="singleTask" />
     </application>
 

@@ -50,14 +50,6 @@ public class ShowSortActivity extends Activity implements View.OnClickListener/*
         ImageButton return_button = (ImageButton)findViewById(R.id.return_button);
         return_button.setOnClickListener(this);
 
-        /*initData();
-        ListView mListView = (ListView)findViewById(R.id.main_listview);
-        CardAdapter mAdapter = new CardAdapter(data, this);
-        mListView.setAdapter(mAdapter);
-        mListView.setFocusable(true);
-        mListView.setFocusableInTouchMode(true);
-        mListView.setOnItemClickListener(this);*/
-
         /*
         现在开始判断上一个活动传入的值是什么,动态更改主页图片，达到重用目的
          */
@@ -96,25 +88,6 @@ public class ShowSortActivity extends Activity implements View.OnClickListener/*
         onBackPressed();
         finish();
     }
-
-    /*private void initData() {
-        for(int i=0;i<10;i++){
-            Card card = new Card("some", "2016", "good");
-            data.add(card);
-        }
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Log.d("Main2Activity", String.valueOf(view.getId()));
-        Log.d("Main2Activity", String.valueOf(R.id.header));
-        switch (position){
-            case 0:
-                startActivity(new Intent(ShowSortActivity.this, AcitivityMoreInfo.class));
-                break;
-            default:
-        }
-    }*/
 
     class ShowAsyncTask extends AsyncTask<Void, Integer, Boolean> {
 

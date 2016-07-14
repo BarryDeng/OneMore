@@ -20,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.yanghuan.onemorecharge.ActivityMoreInfo.AcitivityMoreInfo;
-import com.example.yanghuan.onemorecharge.SideSet.HistroyBrowserActivtity;
 import  com.example.yanghuan.onemorecharge.SideSet.InformationActivity;
 import  com.example.yanghuan.onemorecharge.Personal.PersonalActivity;
 import  com.example.yanghuan.onemorecharge.R;
@@ -94,7 +93,7 @@ public class Main2Activity extends AppCompatActivity
         }
     }
 
-   /* @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -102,12 +101,12 @@ public class Main2Activity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.string.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -125,9 +124,7 @@ public class Main2Activity extends AppCompatActivity
             intent = new Intent(Main2Activity.this, ShowSortActivity.class);
             intent.putExtra("data", R.string.eating);
             startActivity(intent);
-        } else if (id == R.id.nav_history) {
-            startActivity(new Intent(Main2Activity.this, HistroyBrowserActivtity.class));
-        }  else if (id == R.id.nav_message) {
+        } else if (id == R.id.nav_message) {
             startActivity(new Intent(Main2Activity.this, InformationActivity.class));
         } else if (id == R.id.nav_movie) {
             intent = new Intent(Main2Activity.this, ShowSortActivity.class);
