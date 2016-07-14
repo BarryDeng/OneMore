@@ -15,13 +15,13 @@ public class ChangeUsersInfo extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_info_change_layout);
-        Button changebutton = (Button)findViewById(R.id.savebutton);
-        changebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ChangeUsersInfo.this, PersonalActivity.class));
-                finish();
-            }
-        });
+//        Button changebutton = (Button)findViewById(R.id.savebutton);
+//        changebutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(ChangeUsersInfo.this, PersonalActivity.class));
+//                finish();
+//            }
+//        });
     }
 }
