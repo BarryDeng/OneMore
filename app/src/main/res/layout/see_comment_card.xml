@@ -47,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="lala"
+                    android:text="@string/user_nikoname"
                     android:textSize="24sp"
                     android:id="@+id/com_name" />
 
@@ -71,12 +71,12 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/priase_black"
-                android:id="@+id/imageButton" />
+                android:id="@id/praise_view" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="50"
+                    android:text="@string/user_activity_more_praise_number"
                     android:textSize="24dp"
                     android:layout_marginLeft="8dp"
                     android:id="@+id/priase_number" />
@@ -97,7 +97,7 @@
                 android:layout_marginTop="2dp"
                 android:text="活动非常好呀，锻炼身体的同时还能交到好朋友。已经参加过类似的活动，看到这个马上报名啦！"
                 android:textSize="14dp"
-                android:id="@+id/imageButton" />
+                android:id="@+id/comment_return" />
 
         </RelativeLayout>
 

@@ -8,32 +8,38 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:background="#00bcd4"
         android:gravity="center_vertical"
         android:id="@+id/par_act_title"
         android:layout_height="56dp">
-
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@id/back"
+            android:layout_gravity="left|center"
+            android:background="@drawable/back"
+          />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="活动评论"
+            android:layout_gravity="center"
             android:textSize="20sp"
             android:textColor="#ffffff"
-            android:layout_marginLeft="72dp"
-            android:id="@+id/see_com" />
-    </LinearLayout>
+            android:id="@+id/see_com"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_below="@+id/par_act_title"
-        android:id="@+id/comment_list"
+        android:id="@+id/comment"
         android:layout_weight="1" />
 
 </RelativeLayout>

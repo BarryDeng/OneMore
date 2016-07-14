@@ -33,7 +33,7 @@
             android:layout_height="200dp"
             android:scaleType="fitCenter"
             android:id="@+id/background_change"
-            android:background="@drawable/background"
+            android:background="@drawable/badminton"
             android:layout_below="@id/view"
             android:layout_above="@+id/relativeLayout2"
             android:layout_alignParentLeft="true"
@@ -174,10 +174,9 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:text="时间:"
-                    android:layout_alignParentTop="true"
                     android:gravity="center"
-                    android:layout_toLeftOf="@+id/activity_more_text"
-                    android:layout_toStartOf="@+id/activity_more_text" />
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="@color/text_color"
@@ -187,8 +186,10 @@
                     android:text="@string/user_time_order"
                     android:id="@+id/activity_more_text"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="74dp"
+                    android:layout_marginEnd="74dp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -207,12 +208,10 @@
                 android:layout_width="wrap_content"
                 android:textColor="@color/text_color"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
                 android:text="地点:"
-                android:layout_alignParentTop="true"
                 android:gravity="center"
-                android:layout_toLeftOf="@+id/user_place_text"
-                android:layout_toStartOf="@+id/user_place_text" />
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -223,8 +222,10 @@
                 android:text="@string/user_place_order"
                 android:id="@+id/user_place_text"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true" />
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="45dp"
+                android:layout_marginEnd="45dp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -244,11 +245,10 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:text="预计人数:"
+                android:id="@+id/person_number"
                 android:gravity="center"
                 android:layout_alignParentTop="true"
-                android:layout_toLeftOf="@+id/use_activity_person_number_text"
-                android:layout_toStartOf="@+id/use_activity_person_number_text"
-                 />
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -258,11 +258,12 @@
                 android:gravity="center"
                 android:text="@string/user_person_number_order"
                 android:id="@+id/use_activity_person_number_text"
+
                 android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="134dp"
-                android:layout_marginEnd="134dp" />
+                android:layout_toRightOf="@+id/person_number"
+                android:layout_toEndOf="@+id/person_number"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp" />
         </RelativeLayout>
 
     </RelativeLayout>

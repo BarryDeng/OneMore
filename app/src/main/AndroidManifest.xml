@@ -47,7 +47,7 @@
             android:name=".SideSet.ShowSortActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".ActivityMoreInfo.AcitivityMoreInfo"
+            android:name=".ActivityMoreInfo.CommentActivity"
             android:launchMode="singleTask" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

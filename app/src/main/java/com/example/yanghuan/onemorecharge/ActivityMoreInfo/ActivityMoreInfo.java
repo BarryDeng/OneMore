@@ -60,6 +60,7 @@ public class ActivityMoreInfo extends Activity implements View.OnClickListener{
                 break;
             case R.id.comment_view:
                 Intent intent = new Intent(ActivityMoreInfo.this, CommentActivity.class);
+                startActivity(intent);
             default:
         }
     }
