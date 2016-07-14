@@ -68,4 +68,7 @@
     <string name="eating">餐饮</string>
     <string name="sing">K歌</string>
     <string name="movie">电影</string>
+
+    <string name="search_title">搜索</string>
+    <string name="search_hint">搜索感兴趣的活动或用户</string>
 </resources>
