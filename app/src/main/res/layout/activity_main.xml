@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout01"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 android:background="#ffffff"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
-                android:hint="输入手机号/邮箱/昵称"
+                android:hint="@string/user_id"
                 android:textSize="12dp"
                 android:textColor="#888888"
                 android:inputType="text"
@@ -86,78 +86,74 @@
                 android:layout_height="48dp"
                 android:background="#ffffff"
                 android:layout_marginTop="5dp"
-                android:hint="密码"
+                android:hint="请输入密码"
+                android:text="@string/user_password"
                 android:textSize="12dp"
                 android:textColor="#888888"
                 android:inputType="text"
                 android:paddingLeft="10dp" />
 
-            <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@drawable/line"-->
-            <!--android:layout_below="@+id/user_password"-->
-            <!--/    android:layout_alignLeft="@+id/user_password"-->
-            <!--android:layout_alignRight="@+id/user_password"-->
-            <!--android:id="@+id/Line1" />-->
         </LinearLayout>
-
-    </LinearLayout>
-
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/btn_login"
-        android:layout_marginLeft="42dp"
-        android:layout_marginRight="42dp"
-        android:id="@+id/relativeLayout2">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="4dp"
-            android:text="记住密码"
-            android:layout_marginTop="25dp"
-            android:textStyle="bold"
-            android:textSize="12dp"
-            android:id="@+id/checkBox2" />
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_rect_angle"
+            android:textColor="#ffffff"
+            android:layout_marginTop="207dp"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:text="@string/log_in"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:id="@+id/btn_login_regist"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_below="@+id/btn_login"
-            android:layout_marginTop="15dp"
             android:paddingLeft="8dp"
             android:paddingRight="25dp"
             android:text="注册新账号"
             android:textColor="#00bcd4"
             android:background="#00000000"
             android:textSize="12sp"
+            android:layout_alignBottom="@+id/btn_login"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="75dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="记住密码"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:id="@+id/checkBox2"
+            android:layout_alignTop="@+id/btn_login_regist"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/remenber_check"
-            android:layout_marginTop="25dp"
             android:checked="true"
-            android:layout_alignBottom="@+id/checkBox2"
+            android:layout_alignTop="@+id/checkBox2"
             android:layout_toRightOf="@+id/checkBox2"
             android:layout_toEndOf="@+id/checkBox2" />
 
     </RelativeLayout>
 
+
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="42dp"
         android:layout_marginRight="42dp"
-        android:layout_below="@+id/btn_login"
         android:id="@+id/relativeLayout3">
 
 
@@ -218,28 +214,5 @@
             android:layout_alignRight="@+id/View2"
             android:layout_alignEnd="@+id/View2" />
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_rect_angle"
-            android:textColor="#ffffff"
-            android:layout_marginTop="207dp"
-            android:text="登录"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
     </RelativeLayout>
-
-    <!--<Button-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="New Button"-->
-    <!--android:id="@+id/button3"-->
-    <!--android:layout_below="@+id/relativeLayout2"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_marginTop="71dp" />-->
-
-
 </RelativeLayout>

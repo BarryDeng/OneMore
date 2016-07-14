@@ -23,4 +23,29 @@
     <string name="user_activity_more_add_number">5</string>
     <string name="user_activity_more_comemt_number">10</string>
     <string name="user_activity_more_praise_number">100</string>
+
+    <!--保存用户的用户名和密码-->
+    <string name="user_id">输入手机号/邮箱/昵称</string>
+    <string name="user_password"></string>
+    <string name="user_nikoname">lala</string>
+    <string name="user_age">18</string>
+    <string name="user_address">湖南省</string>
+    <string name="user_phonenumber">18251827779</string>
+    <string name="user_introduction">自在飞花轻似梦</string>
+    <string name="user_birthday">1995.10.18</string>
+    <string name="user_hobby">羽毛球、乒乓球</string>
+    <!--用来显示登陆登出-->
+    <string name="log_in">登录</string>
+    <string name="log_in_prepare">登陆中</string>
+    <!--用户创建活动相关-->
+    <string name="activity_title">活动标题</string>
+    <string name="activity_content">活动内容</string>
+    <string name="activity_classification">桌游</string>
+    <!--活动名称-->
+    <string name="trvel">旅游</string>
+    <string name="play">桌游</string>
+    <string name="sport">运动</string>
+    <string name="eating">餐饮</string>
+    <string name="sing">K歌</string>
+    <string name="movie">电影</string>
 </resources>

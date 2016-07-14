@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="text_color">#222222</color>
+    <color name="basis_color1">#00bcd4</color>
+    <color name="basis_color2">#e0f9fa</color>
+    <color name="basis_color3">#00acc1</color>
+    <color name="emphasis_color">#ff6f00</color>
 </resources>
