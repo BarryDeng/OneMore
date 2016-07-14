@@ -15,7 +15,7 @@ public class Card {
     private String place;
     private String time;
     private String connent;
-    private String url = "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png";
+    private String url = "http://g.hiphotos.baidu.com/zhidao/pic/item/aa64034f78f0f736795f59e20b55b319eac413ab.jpg";
 
     public Card(String name, String desc, String connent, Context context) {
         this.place = place;

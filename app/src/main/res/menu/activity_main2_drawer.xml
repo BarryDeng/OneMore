@@ -5,26 +5,27 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_board_game"
-
+            android:icon="@drawable/play2"
             android:title="桌游" />
         <item
             android:id="@+id/nav_dining"
-
+            android:icon="@drawable/eating2"
             android:title="餐饮" />
         <item
             android:id="@+id/nav_travel"
-
+            android:icon="@drawable/travel2"
             android:title="旅游" />
         <item
             android:id="@+id/nav_sport"
-
+            android:icon="@drawable/sport2"
             android:title="运动" />
         <item
             android:id="@+id/nav_movie"
-
+            android:icon="@drawable/film"
             android:title="电影" />
         <item
             android:id="@+id/nav_sing"
+            android:icon="@drawable/sing2"
             android:title="K歌"/>
     </group>
 
@@ -32,11 +33,11 @@
         <menu>
             <item
                 android:id="@+id/nav_message"
-
+                android:icon="@drawable/comment_black"
                 android:title="消息" />
             <item
                 android:id="@+id/nav_set"
-
+                android:icon="@drawable/settings"
                 android:title="设置" />
         </menu>
     </item>

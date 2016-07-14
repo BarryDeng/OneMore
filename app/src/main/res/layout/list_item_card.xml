@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:example="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/tools"
-    android:background="@android:color/holo_blue_light"
+    android:background="@android:color/transparent"
     android:layout_width="match_parent"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
@@ -12,6 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:scaleType="centerCrop"
         android:id="@+id/person_album"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -19,9 +20,10 @@
     </ImageView>
 
     <RelativeLayout
-        android:background="#00ffff"
+        android:background="#fdfdfd"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="80dp"
+        android:id="@+id/sad"
         android:layout_below="@id/person_album"
         android:layout_centerHorizontal="true">
 
@@ -29,51 +31,69 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="2dp"
             android:text="@string/activity_title"
+            android:textSize="16dp"
             android:id="@+id/title_view"
-            android:textColor="@android:color/white"
+            android:textColor="#000000"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
-        <com.example.yanghuan.onemorecharge.RoundeImageView
-            android:layout_width="100dip"
-            android:layout_height="100dip"
-            android:src="@drawable/touxiang"
-            android:id="@+id/head_view"
-            app:borderRadius="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="16dp"
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_alignParentBottom="true"
-            >
-        </com.example.yanghuan.onemorecharge.RoundeImageView>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/tag"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/relativeLayout4"
+            android:layout_toLeftOf="@+id/tag">
+            <com.example.yanghuan.onemorecharge.RoundeImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@drawable/touxiang"
+                android:id="@+id/head_view"
+                app:borderRadius="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+            </com.example.yanghuan.onemorecharge.RoundeImageView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/user_nikoname"
-            android:textSize="24dp"
-            android:textColor="@android:color/white"
-            android:id="@+id/user_name"
-            android:layout_above="@+id/tag_photo"
-            android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_nikoname"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:id="@+id/user_name"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/head_view"
+                android:layout_toEndOf="@+id/head_view" />
 
+        </RelativeLayout>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
             android:id="@+id/tag_photo"
             android:src="@drawable/symbol_black"
-            android:layout_alignBottom="@+id/head_view"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/relativeLayout4" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/sport"
-            android:textColor="@android:color/white"
+            android:textColor="#8a8a8a"
             android:id="@+id/tag"
-            android:layout_alignBottom="@+id/head_view"
+            android:layout_marginTop="14dp"
+            android:layout_alignTop="@+id/tag_photo"
             android:layout_toLeftOf="@+id/tag_photo"
             android:layout_toStartOf="@+id/tag_photo" />
 

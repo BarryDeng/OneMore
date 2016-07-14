@@ -1,6 +1,7 @@
 package com.example.yanghuan.onemorecharge.ActivityMoreInfo;
 
 import android.app.Activity;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -42,6 +43,8 @@ public class CommentActivity extends AppCompatActivity
         JazzyRecyclerViewScrollListener listener = new JazzyRecyclerViewScrollListener();
         mRView.setOnScrollListener(listener);
         listener.setTransitionEffect(new TiltEffect());
+        int spacingInPixel = getResources().getDimensionPixelSize(R.dimen.space);
+        mRView.addItemDecoration(new SpaceItemDecoration(spacingInPixel));
 
         AsyncTask<List<CommentCard>, Integer, List<Drawable>> task = new AsyncTask<List<CommentCard>, Integer, List<Drawable>>() {
             @Override
@@ -81,5 +84,18 @@ public class CommentActivity extends AppCompatActivity
             onBackPressed();
              finish();
     }
+    public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
+        private int space;
 
+        public SpaceItemDecoration(int space) {
+            this.space = space;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            if (parent.getChildPosition(view) != 0) {
+                outRect.top = space;
+            }
+        }
+    }
 }

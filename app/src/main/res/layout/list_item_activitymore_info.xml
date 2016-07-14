@@ -7,7 +7,7 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
-        android:background="#00ffff"
+        android:background="#00bcd4"
         android:id="@+id/view">
         <ImageButton
             android:layout_width="50dp"
@@ -21,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"
+            android:foregroundGravity="center"
             android:textColor="@android:color/white"
             android:textSize="24dp"
             android:text="活动详情
@@ -138,6 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="@string/activity_title"
+            android:layout_marginTop="8dp"
             android:textSize="24dp"
             android:textColor="@color/text_color"
             android:id="@+id/title" />
@@ -164,7 +166,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_below="@+id/content"
-            android:background="@drawable/shape_rect_angle"
+            android:background="#fdfdfd"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:id="@+id/relativeLayout">
@@ -174,22 +176,19 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:text="时间:"
-                    android:gravity="center"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+                    android:gravity="center|left"
+                    android:layout_marginLeft="50dp"
+                   />
                 <TextView
                     android:layout_width="wrap_content"
                     android:textColor="@color/text_color"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center"
                     android:text="@string/user_time_order"
                     android:id="@+id/activity_more_text"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginRight="74dp"
-                    android:layout_marginEnd="74dp" />
+                    android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -198,7 +197,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/shape_rect_angle"
+            android:background="#fdfdfd"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/relativeLayout"
             android:layout_centerHorizontal="true"
@@ -209,9 +208,8 @@
                 android:textColor="@color/text_color"
                 android:layout_height="match_parent"
                 android:text="地点:"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:gravity="center|left"
+                android:layout_marginLeft="50dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -222,10 +220,7 @@
                 android:text="@string/user_place_order"
                 android:id="@+id/user_place_text"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="45dp"
-                android:layout_marginEnd="45dp" />
+                android:layout_centerHorizontal="true"  />
         </RelativeLayout>
 
         <RelativeLayout
@@ -235,7 +230,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:background="@drawable/shape_rect_angle"
+            android:background="#fdfdfd"
             android:layout_below="@+id/relativeLayout3"
             android:layout_centerHorizontal="true">
 
@@ -246,9 +241,8 @@
                 android:layout_gravity="center_horizontal"
                 android:text="预计人数:"
                 android:id="@+id/person_number"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:gravity="center|left"
+                android:layout_marginLeft="50dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -258,12 +252,8 @@
                 android:gravity="center"
                 android:text="@string/user_person_number_order"
                 android:id="@+id/use_activity_person_number_text"
-
                 android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/person_number"
-                android:layout_toEndOf="@+id/person_number"
-                android:layout_marginLeft="38dp"
-                android:layout_marginStart="38dp" />
+                android:layout_centerHorizontal="true"/>
         </RelativeLayout>
 
     </RelativeLayout>

@@ -7,6 +7,7 @@
             android:summaryOn="开启通知提醒"
             android:title="消息通知"
             android:defaultValue="true"
+            android:icon="@drawable/message"
             />
         <ListPreference
             android:key="change_language"
@@ -15,22 +16,26 @@
             android:entries="@array/entries_str"
             android:entryValues="@array/entries_value_str"
             android:title="语言切换"
-
+            android:icon="@drawable/languge"
             >
         </ListPreference>
         <Preference
             android:title="用户反馈"
             android:key="users_retrun"
+            android:icon="@drawable/feedback"
             ></Preference>
         <Preference
             android:title="版本更新"
+            android:icon="@drawable/update"
             android:key="update_version"
             ></Preference>
         <Preference
             android:title="关于我们"
+            android:icon="@drawable/about_us"
             android:key="codex"></Preference>
         <Preference
             android:title="注销"
+            android:icon="@drawable/cancel"
             android:key="logout"></Preference>
     </PreferenceCategory>
 </PreferenceScreen>
