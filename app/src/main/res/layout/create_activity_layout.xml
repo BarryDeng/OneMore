@@ -86,7 +86,7 @@
                 android:orientation="vertical" >
 
                 <Spinner
-                    android:id="@+id/tag"
+                    android:id="@+id/tags"
                     android:layout_marginTop="20dp"
                     android:layout_toRightOf="@+id/strut"
                     android:layout_alignParentRight="true"
