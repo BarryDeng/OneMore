@@ -28,7 +28,7 @@
             android:name=".SideSet.InformationActivity"
             android:launchMode="singleTask" />
         <activity
-            android:name=".SideSet.SetActivity"
+            android:name=".SideSet.SettingActivity"
             android:launchMode="singleTask" />
         <activity
             android:name=".Personal.ChangeUsersInfo"
@@ -59,7 +59,8 @@
         <activity
             android:name=".Personal.ParticipatePlans"
             android:label="@string/title_activity_participate_plans"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SideSet.AboutusActivity"></activity>
     </application>
 
 </manifest>

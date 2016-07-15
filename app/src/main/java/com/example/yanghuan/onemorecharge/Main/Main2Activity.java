@@ -1,8 +1,6 @@
 package com.example.yanghuan.onemorecharge.Main;
 
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
@@ -10,11 +8,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -25,11 +20,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.ImageView;
-import com.example.yanghuan.onemorecharge.ActivityMoreInfo.*;
+
 import  com.example.yanghuan.onemorecharge.SideSet.InformationActivity;
 import  com.example.yanghuan.onemorecharge.Personal.PersonalActivity;
 import  com.example.yanghuan.onemorecharge.R;
-import  com.example.yanghuan.onemorecharge.SideSet.SetActivity;
+import com.example.yanghuan.onemorecharge.SideSet.SettingActivity;
 import com.twotoasters.jazzylistview.effects.TiltEffect;
 import com.twotoasters.jazzylistview.recyclerview.JazzyRecyclerViewScrollListener;
 import com.example.yanghuan.onemorecharge.SideSet.ShowSortActivity;
@@ -43,6 +38,8 @@ public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener
          {
 
+
+    private String addr = "http://192.168.3.35:8088/pics/";
     private List<Card> data = new ArrayList<Card>();
     //test string
     private RecyclerView mRView;
@@ -54,16 +51,16 @@ public class Main2Activity extends AppCompatActivity
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main2);
 
-        urls.add("http://192.168.1.205:8088/pics/1.jpg");
-        urls.add("http://192.168.1.205:8088/pics/2.jpg");
-        urls.add("http://192.168.1.205:8088/pics/3.jpg");
-        urls.add("http://192.168.1.205:8088/pics/4.jpg");
-        urls.add("http://192.168.1.205:8088/pics/5.jpg");
-        urls.add("http://192.168.1.205:8088/pics/6.jpg");
-        urls.add("http://192.168.1.205:8088/pics/7.jpg");
-        urls.add("http://192.168.1.205:8088/pics/8.jpg");
-        urls.add("http://192.168.1.205:8088/pics/9.jpg");
-        urls.add("http://192.168.1.205:8088/pics/10.jpg");
+        urls.add(addr+"1.jpg");
+        urls.add(addr+"2.jpg");
+        urls.add(addr+"3.jpg");
+        urls.add(addr+"4.jpg");
+        urls.add(addr+"5.jpg");
+        urls.add(addr+"6.jpg");
+        urls.add(addr+"7.jpg");
+        urls.add(addr+"8.jpg");
+        urls.add(addr+"9.jpg");
+        urls.add(addr+"10.jpg");
 
         mRView = (RecyclerView)findViewById(R.id.main_recycler_view);
         mRView.setLayoutManager(new LinearLayoutManager(this));
@@ -190,7 +187,7 @@ public class Main2Activity extends AppCompatActivity
             intent.putExtra("data", R.string.movie);
             startActivity(intent);
         }else if (id == R.id.nav_set) {
-            startActivity(new Intent(Main2Activity.this, SetActivity.class));
+            startActivity(new Intent(Main2Activity.this, SettingActivity.class));
         }else if (id == R.id.nav_sport) {
             intent = new Intent(Main2Activity.this, ShowSortActivity.class);
             intent.putExtra("data", R.string.sport);
